@@ -69,6 +69,11 @@
       .mono { font-family: "IBM Plex Mono", ui-monospace, monospace; }
       a { color: inherit; }
       img { max-width: 100%; height: auto; display: block; }
+      /* 줄바꿈 고립 방지: 제목·목록·본문은 줄 길이를 고르게 나눠 마지막 줄에
+         짧은 조각(5글자 이하)이 혼자 남지 않게 한다. figcaption은 pretty로.
+         (text-wrap 미지원 브라우저에서는 기존 줄바꿈 그대로.) */
+      h1, h2, h3, li, p { text-wrap: balance; }
+      figcaption { text-wrap: pretty; }
       .wrap { max-width: 1120px; margin: 0 auto; padding: 0 22px; }
 
       /* ── 상단 내비 ─────────────────────────── */
